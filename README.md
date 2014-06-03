@@ -8,20 +8,18 @@ Written and tested on few Digital Ocean droplets, but theoretically it should wo
 
 1. Copy all code from ubuntu file in the repo
 2. On your server,
- 
 ```bash
 nano ubuntu.sh
 ```
 
 3. Paste all the code inside
 4. Make ubuntu.sh executable
- 
+
 ```bash
 chmod +x ubuntu.sh
 ```
 
 5. Run the install script
-
 ```bash
 ./ubuntu.sh
 ```
