@@ -19,6 +19,9 @@ echo "localip $ip" >> /etc/pptpd.conf
 echo "remoteip 10.1.0.1-100" >> /etc/pptpd.conf
 
 # Input username and password
+echo "###################################"
+echo "Please enter your new login details"
+echo "###################################"
 echo "Enter new username: "
 read username
 echo "Enter new password: "
