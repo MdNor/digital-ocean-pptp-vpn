@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "###################################"
+echo "This script will configure PPTP VPN"
+echo "###################################"
+
 # Install PPTP daemon service
 apt-get -y install pptpd
 
@@ -8,8 +12,7 @@ echo "ms-dns 8.8.8.8" >> /etc/ppp/pptpd-options
 echo "ms-dns 8.8.4.4" >> /etc/ppp/pptpd-options
 
 # Get server IP
-ip='ifconfig eth0 | grep 'inet addr' | awk {'print $2'} | sed s/.*://'
-echo
+ip=`ifconfig eth0 | grep 'inet addr' | awk {'print $2'} | sed s/.*://`
 
 # Set IP for server & user
 echo "localip $ip" >> /etc/pptpd.conf
@@ -39,5 +42,13 @@ iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 
 # Save iptable
 iptables-save
+
+echo "############################"
+echo "PPTP VPN Login Details"
+echo "############################"
+echo "Your IP is " $ip
+echo "Your username is " $username
+echo "Your password is " $password
+echo "############################"
 
 exit
