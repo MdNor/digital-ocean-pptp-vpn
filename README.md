@@ -2,31 +2,24 @@ digital-ocean-pptp-vpn
 ======================
 
 Install script for PPTP VPN on Digital Ocean droplet.
-Written and tested on few Digital Ocean droplets, but theoretically it should work on any other KVM-based server.
+Written and tested on Digital Ocean droplets, but it should work on any other server.
 
 #### Ubuntu
 
-1. Copy all code from ubuntu file in the repo
-2. On your server,
 ```bash
-nano ubuntu.sh
+wget https://raw.githubusercontent.com/MdNor/digital-ocean-pptp-vpn/master/ubuntu
 ```
 
-3. Paste all the code inside
-4. Make ubuntu.sh executable
-
 ```bash
-chmod +x ubuntu.sh
+sh ubuntu
 ```
 
-5. Run the install script
+#### CentOS
+
 ```bash
-./ubuntu.sh
+wget https://raw.githubusercontent.com/MdNor/digital-ocean-pptp-vpn/master/centos
 ```
 
-Done
-
-
-
-#### CentOS (in-progress)
-
+```bash
+sh centos
+```
