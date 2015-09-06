@@ -46,6 +46,8 @@ iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 # Save iptable
 iptables-save
 
+apt-get install iptables-persistent
+
 echo "############################"
 echo "PPTP VPN Login Details"
 echo "############################"
