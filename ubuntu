@@ -42,6 +42,7 @@ sysctl -p
 
 # Allow PPTP traffic on iptables
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+iptables -A INPUT -p 47 -j ACCEPT
 
 # Save iptable
 iptables-save
