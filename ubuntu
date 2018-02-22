@@ -47,6 +47,8 @@ iptables -A INPUT -p 47 -j ACCEPT
 # Save iptable
 iptables-save
 
+apt-get install iptables-persistent
+
 echo "############################"
 echo "PPTP VPN Login Details"
 echo "############################"
