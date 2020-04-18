@@ -12,7 +12,7 @@ echo "ms-dns 8.8.8.8" >> /etc/ppp/pptpd-options
 echo "ms-dns 8.8.4.4" >> /etc/ppp/pptpd-options
 
 # Get server IP
-ip=`ifconfig eth0 | grep 'inet addr' | awk {'print $2'} | sed s/.*://`
+ip=`ifconfig eth0 | grep 'inet ' | awk {'print $2'} | sed s/.*://`
 
 # Set IP for server & user
 echo "localip $ip" >> /etc/pptpd.conf
